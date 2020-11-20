@@ -1,0 +1,90 @@
+html,
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: var(--background);
+  margin: 0;
+  font-size: 14px;
+  color: white;
+}
+
+:root {
+  --background: #272640;
+  --red: #e63946;
+}
+
+.btn {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+h1,
+h2 {
+  font-weight: 900;
+  color: white;
+}
+
+/*** Register ***/
+
+.signup-img {
+  background-image: url("../assets/images/pic3.jpg");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.signin-img {
+  background-image: url("../assets/images/pic2.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+@media all and (max-width: 992px) {
+  .signup-img,
+  .signin-img {
+    display: none;
+  }
+}
+.form {
+  padding: 25px 40px;
+  background-color: var(--background);
+  max-width: 480px;
+  margin: 0 auto;
+  box-shadow: 0 0px 4.2px rgba(0, 0, 0, 0.04), 0 0px 14.1px rgba(0, 0, 0, 0.06),
+    0 0px 63px rgba(0, 0, 0, 0.1);
+  color: white;
+  border-radius: 10px;
+}
+
+label {
+  color: #cad2c5;
+  font-weight: 500;
+}
+
+.form-control {
+  background-color: #202039 !important;
+  border: none;
+  color: white !important;
+}
+
+.form p {
+  color: #cad2c5;
+  font-size: 90%;
+}
+
+.form a {
+  color: white;
+}
+
+.is-invalid {
+  color: var(--red);
+  font-size: 80%;
+  margin-top: 5px;
+}
