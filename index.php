@@ -1,15 +1,7 @@
 <?php
-
-require_once "./includes/config.php";
-require_once "./includes/classes/PreviewProvider.php";
-
-
-if (!isset($_SESSION["is_loggedIn"])) {
-    header("Location: login.php");
-}
-
-$username = $_SESSION["is_loggedIn"];
+$title = 'Home';
+require_once "./includes/header.php";
 
 $preview = new PreviewProvider($db, $username);
 
-$preview->createPreviewVideo("");
+echo $preview->createPreviewVideo(null);

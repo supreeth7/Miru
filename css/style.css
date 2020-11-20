@@ -30,7 +30,7 @@ h2 {
   color: white;
 }
 
-/*** Register ***/
+/*** SignUp & SignIn ***/
 
 .signup-img {
   background-image: url("../assets/images/pic3.jpg");
@@ -87,4 +87,47 @@ label {
   color: var(--red);
   font-size: 80%;
   margin-top: 5px;
+}
+
+/*** Preview ***/
+
+.preview-video,
+.preview-img {
+  width: 100%;
+}
+
+.preview-container {
+  position: relative;
+  display: flex;
+}
+
+.preview-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+}
+
+.preview-header {
+  position: relative;
+  top: 35%;
+  margin-left: 50px;
+}
+
+.preview-buttons .btn {
+  max-height: 50px;
+  width: 130px;
+  padding: 10px 30px;
+  border-radius: 3px;
+  color: white;
+  background-color: rgba(51, 51, 51, 0.6);
+  font-weight: 700;
+  border: none;
+  transition: 0.3s ease-in-out;
+  margin-right: 20px;
+}
+
+.preview-buttons .btn:hover {
+  background-color: white;
+  color: black;
 }

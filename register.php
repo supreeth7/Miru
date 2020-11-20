@@ -27,12 +27,13 @@ if (isset($_POST["submit"])) {
     $password = FormSanitizer::sanitizePassword($_POST['password']);
     $confirm_password = FormSanitizer::sanitizePassword($_POST['confirm_password']);
     $is_registered = $account->register($firstname, $lastname, $username, $email, $password, $confirm_password);
+    if ($is_registered) {
+        $_SESSION["is_loggedIn"] = $username;
+        header("Location: index.php");
+    }
 }
 
-if ($is_registered || $_SESSION["is_loggedIn"]) {
-    $_SESSION["is_loggedIn"] = $username;
-    header("Location: index.php");
-}
+
 
 ?>
 

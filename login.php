@@ -13,11 +13,11 @@ if (isset($_POST["login"])) {
     $username = FormSanitizer::sanitizeUsername($_POST['username']);
     $password = FormSanitizer::sanitizePassword($_POST['password']);
     $is_loggedIn = $account->login($username, $password);
-}
 
-if ($s_loggedIn || $_SESSION["is_loggedIn"]) {
-    $_SESSION["is_loggedIn"] = $username;
-    header("Location: index.php");
+    if ($is_loggedIn) {
+        $_SESSION["is_loggedIn"] = $username;
+        header("Location: index.php");
+    }
 }
 
 

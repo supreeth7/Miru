@@ -1,10 +1,24 @@
+<?php
+
+require_once "config.php";
+require_once "classes/Entity.php";
+require_once "classes/PreviewProvider.php";
+
+
+if (!isset($_SESSION["is_loggedIn"])) {
+    header("Location: login.php");
+}
+
+$username = $_SESSION["is_loggedIn"];?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?=$title?></title>
+    <title><?=$title?>
+    </title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
         rel="stylesheet">
@@ -15,3 +29,5 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
+<body>
