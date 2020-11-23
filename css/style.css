@@ -89,11 +89,15 @@ label {
   margin-top: 5px;
 }
 
-/*** Preview ***/
+/*** Preview Video***/
 
 .preview-video,
 .preview-img {
   width: 100%;
+}
+
+.preview-img {
+  display: none;
 }
 
 .preview-container {
